@@ -16,7 +16,7 @@ var eventEl = document.querySelectorAll("event");
 var dateEl = document.querySelectorAll(".saveBtn");
 
 // setup day, date & year display
-var nowDay = moment().format("ddd mmmm Do YY");
+var nowDay = moment().format("dddd, MMM Do YY");
 dateEl.textContent = nowDay;
 
 // setup time for daily schedule
