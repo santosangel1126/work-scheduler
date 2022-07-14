@@ -1,26 +1,28 @@
 var workHours = [
-  "8am",
-  "9am",
-  "10am",
-  "11am",
-  "12pm",
-  "1pm",
-  "2pm",
-  "3pm",
-  "4pm",
-  "5pm",
-];
+  "8",
+  "9",
+  "10",
+  "11",
+  "12",
+  "13",
+  "14",
+  "15",
+  "16",
+  
+]
 var hourEl = document.querySelectorAll(".hour");
 var rowEl = document.querySelector(".row");
-var eventEl = document.querySelectorAll("event");
+var eventEl = document.querySelectorAll("textarea");
+var colHour = document.querySelectorAll('.col');
+var dateEl = document.querySelectorAll('currentDay');
 var dateEl = document.querySelectorAll(".saveBtn");
 
 // setup day, date & year display
 var nowDay = moment().format("dddd, MMM Do YY");
-dateEl.textContent = nowDay;
+dateEl.textContent = nowDay
 
 // setup time for daily schedule
-var currentTime = moment().format("h");
+var currentTime = moment().format('h');
 
 // function to display the correct time in each slot
 function outputHours() {
@@ -34,7 +36,9 @@ function outputHours() {
         hourDisplay = hourDisplay - 12;
       }
     }
+
     hourEl[i].textContent = hourDisplay + amPm;
+
     if (parseInt(workHours[i]) > parseInt(currentTime)) {
       eventEl[i].setAttribute("class", "future");
     } else if (parseInt(workHours[i]) === currentTime) {
@@ -47,34 +51,34 @@ outputHours();
 //function to save each event to local storage
 function saveEvent() {
   if (eventEl[0].value !== "") {
-    localStorage.setItem("8 Am", eventEl[0].value);
+    localStorage.setItem("8", eventEl[0].value);
   }
   if (eventEl[1].value !== "") {
-    localStorage.setItem("9 Am", eventEl[1].value);
+    localStorage.setItem("9", eventEl[1].value);
   }
   if (eventEl[2].value !== "") {
-    localStorage.setItem("10 Am", eventEl[2].value);
+    localStorage.setItem("10", eventEl[2].value);
   }
   if (eventEl[3].value !== "") {
-    localStorage.setItem("11 Am", eventEl[3].value);
+    localStorage.setItem("11", eventEl[3].value);
   }
   if (eventEl[4].value !== "") {
-    localStorage.setItem("12 Pm", eventEl[4].value);
+    localStorage.setItem("12", eventEl[4].value);
   }
   if (eventEl[5].value !== "") {
-    localStorage.setItem("1 Pm", eventEl[5].value);
+    localStorage.setItem("13", eventEl[5].value);
   }
   if (eventEl[6].value !== "") {
-    localStorage.setItem("2 Pm", eventEl[6].value);
+    localStorage.setItem("14", eventEl[6].value);
   }
   if (eventEl[7].value !== "") {
-    localStorage.setItem("3 Pm", eventEl[7].value);
+    localStorage.setItem("15", eventEl[7].value);
   }
   if (eventEl[8].value !== "") {
-    localStorage.setItem("4 Pm", eventEl[8].value);
+    localStorage.setItem("16", eventEl[8].value);
   }
   if (eventEl[9].value !== "") {
-    localStorage.setItem("5 Pm", eventEl[9].value);
+    localStorage.setItem("17", eventEl[9].value);
   }
 }
 //create function to reload save entries from local storage
