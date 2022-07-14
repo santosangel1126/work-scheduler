@@ -18,4 +18,9 @@ THEN the saved events persist
 
 
 ![Screen Shot 2022-07-14 at 1 30 14 PM](https://user-images.githubusercontent.com/98060503/179078045-9b37e22e-b71d-4157-9748-6bcad534d6df.png)
-rgb(43, 40, 40)
+
+
+
+Deplyed Link: https://santosangel1126.github.io/work-scheduler/
+
+Repository link: https://github.com/santosangel1126/work-scheduler.git
